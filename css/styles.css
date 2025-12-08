@@ -85,11 +85,6 @@ button {
   color: var(--secondary-text-color);
   margin-bottom: 8px;
 }
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
 
 /* _____HEADER_____ */
 .header {
@@ -452,6 +447,9 @@ button {
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity var(--animation-duration-time-func),
     visibility var(--animation-duration-time-func);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 .modal {
   position: absolute;
@@ -464,6 +462,11 @@ button {
   background-color: #fcfcfc;
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal-close-btn {
