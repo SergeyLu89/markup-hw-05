@@ -10,6 +10,7 @@
   --text-color-dark-theme: #f4f4fd;
   --main-color: #4d5ae5;
   --accent-color: #404bbf;
+  --animation-duration-time-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -126,6 +127,7 @@ button {
 .nav-list-link {
   font-weight: 500;
   color: var(--secondary-text-color);
+  transition: color var(--animation-duration-time-func);
 }
 .nav-list-link:hover,
 .nav-list-link:focus {
@@ -140,6 +142,7 @@ button {
   font-weight: 400;
   font-style: normal;
   color: var(--main-text-color);
+  transition: color var(--animation-duration-time-func);
 }
 .adress-list-link:hover,
 .adress-list-link:focus {
@@ -177,6 +180,7 @@ button {
   border: none;
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color var(--animation-duration-time-func);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -249,6 +253,7 @@ button {
   height: 40px;
   border-radius: 50%;
   background-color: var(--main-color);
+  transition: background-color var(--animation-duration-time-func);
 }
 .social-link:hover,
 .social-link:focus {
@@ -276,9 +281,11 @@ button {
 .customers-link:hover,
 .customers-link:focus {
   border-color: var(--accent-color);
+  transition: border-color var(--animation-duration-time-func);
 }
 .customers-icon {
   fill: #8e8f99;
+  transition: fill var(--animation-duration-time-func);
 }
 .customers-link:hover .customers-icon,
 .customers-link:focus .customers-icon {
@@ -312,6 +319,7 @@ button {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  transition: background-color var(--animation-duration-time-func);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -341,6 +349,10 @@ button {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
+  transition: color var(--animation-duration-time-func),
+    background-color var(--animation-duration-time-func),
+    border var(--animation-duration-time-func),
+    box-shadow var(--animation-duration-time-func);
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -368,6 +380,7 @@ button {
 
 .portfolio-list-item {
   flex-basis: calc((100% - 48px) / 3);
+  transition: box-shadow var(--animation-duration-time-func);
 }
 .portfolio-list-item:nth-child(3n + 3) {
   margin-right: 0;
