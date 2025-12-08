@@ -85,6 +85,11 @@ button {
   color: var(--secondary-text-color);
   margin-bottom: 8px;
 }
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 
 /* _____HEADER_____ */
 .header {
@@ -436,4 +441,56 @@ button {
 .portfolio-list-link:hover .overlay,
 .portfolio-list-link:focus .overlay {
   transform: translateY(0%);
+}
+/* _____MODAL_____ */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity var(--animation-duration-time-func),
+    visibility var(--animation-duration-time-func);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  height: 584px;
+  border-radius: 4px;
+  background-color: #fcfcfc;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  cursor: pointer;
+  transition: background-color var(--animation-duration-time-func),
+    border-color var(--animation-duration-time-func);
+}
+.modal-close-btn:hover,
+.modal-close-btn:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.close-icon {
+  transition: fill var(--animation-duration-time-func);
+}
+.modal-close-btn:hover .close-icon,
+.modal-close-btn:hover .close-icon {
+  fill: #fff;
 }
